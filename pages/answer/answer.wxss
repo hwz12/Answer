@@ -1,0 +1,297 @@
+/* 头部 */
+.user{
+  display: flex;
+  margin:2vw 0 0 6vw;
+  position:absolute;
+  z-index:20;
+  margin-top:5vh;
+}
+
+.userhead{
+  height:80rpx;
+  width:80rpx;
+  border-radius: 50%;
+  overflow:hidden;
+  border:5rpx solid #fff;
+}
+.mid{
+  margin:2vh 3vh;
+}
+.userheadtext{
+  font-weight:bold;
+  color:#fff;
+  font-size:22rpx;
+  background-color:#6155c2;
+  padding:0rpx 15rpx 4rpx 8rpx;
+  border-radius:20rpx;
+  margin:-10rpx 0 0 -3vw;
+  position:absolute;
+  height:12pt;
+}
+.madal{
+ width:10pt;
+  height:10pt;
+  position:absolute;
+  margin-top:2pt;
+}
+.Text{
+  font-weight:bold;
+  font-size:11pt;
+  color:#fff;
+  padding:4rpx 8rpx;
+  border-radius:20rpx;
+  margin-top:1%
+}
+.Text1{
+  font-weight:bold;
+  font-size:22rpx;
+  color:#fff;
+  padding:4rpx 8rpx;
+  border-radius:20rpx;
+  margin-top:1%
+}
+
+.musicopen{
+  height:13vw;
+  width:13vw;
+  margin-left:33vw;
+  margin-top: 1.5vh;
+}
+
+.bg{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+}
+.background2{
+  position:absolute;
+  z-index:2;
+  height:100vh;
+  width:100vw;
+}
+.ansBg1{
+  width: 86vw;
+  height: 75vh;
+  position: absolute;
+  z-index: 2;
+  margin-left: 7vw;
+  margin-top:20vh;
+}
+.backgroundpp{
+  background-color:#fff;
+  width:80vw;
+  position:absolute;
+  z-index:3;
+  margin-top:20vh;
+  margin-left:10vw;
+  border-radius: 10rpx;
+  height:70vh;
+}
+.ansBg2{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+}
+.ready{
+  width: 80vw;
+  text-align: center;
+  position: absolute;
+  z-index: 3;
+  margin-top: 30vh;
+}
+.readyText{
+  font-weight: bold;
+}
+
+.countDown{
+  font-weight: bold;
+  width: 70vw;
+  position: absolute;
+  z-index: 4;
+  margin-left: 15vw;
+  text-align: center;
+  margin-top: 23vh;
+  color: red;
+}
+
+.times{
+  position:absolute;
+  z-index:10;
+  text-align:center;
+  width:100vw;
+  margin-top:15vh;
+}
+.pop{
+  width:18vw;
+  height:18vw;
+  position:absolute;
+  margin-left:41vw;
+}
+.pop2{
+  width:18vw;
+  height:18vw;
+  z-index:9999;
+  line-height:18vw;
+  position:absolute;
+  margin-left:41vw;
+  color: red;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.times_img{
+  height:18vw;
+  width:18vw;
+  text-align:center;
+}
+.times_view{
+  height:6vw;
+  margin-top:-12.5vw;
+  color: red;
+  font-weight: bold;
+  font-size:12pt;
+}
+
+/**题号**/
+.title{
+  width: 80vw;
+  position: absolute;
+  z-index: 4;
+  text-align: center;
+  margin-top: 7vh;
+  color:#4d3e58;
+}
+.titleText{
+  font-weight: bold;
+  font-size: 15pt;
+}
+/**题目内容**/
+.centont{
+  width: 70vw;
+  z-index: 4;
+  margin:0 5vw;
+  margin-top: 12vh;
+  padding:2px;
+  height:22vh;
+  display: flex;
+  align-items: center;
+  color:#4d3e58;
+}
+.centontText{
+  font-size: 13.5pt;
+  font-weight: bold;
+}
+/**选项**/
+.option{
+  width: 70vw;
+  position: relative;
+  z-index: 4;
+  margin:0 5vw;
+}
+.optionBnt{
+  margin-top: 30rpx;
+  font-size: 13pt;
+  font-weight: 600;
+  color:#4d3e58;
+}
+.mongolia{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+  opacity:0.21;
+  overflow:hidden;
+}
+.score{
+  position:absolute;
+  z-index:30;
+  height:30vh;
+  width:40vh;
+  display:flex;
+  align-items:center;
+  margin:40vh 0 0 17vw;
+}
+.score_star{
+  position:absolute;
+  height:10vh;
+  width:10vh;
+  margin-left: 15vw;
+}
+.score text{
+  position:absolute;
+  margin-left:32vw;
+  font-size:80rpx;
+  font-weight:bold;
+  color:#f08b06;
+}
+.score_bj{
+  width:45vh;
+  height:45vh;
+}
+
+.scoreCss{
+  width: 70vw;
+  position: absolute;
+  z-index: 4;
+  margin-left: 14.4vw;
+  text-align: center;
+  margin-top: 42vh;
+  display:flex;
+  flex-direction: column;
+}
+.scoreText{
+  font-weight: bold;
+  font-size: 26pt;
+  color: white;
+}
+
+.last{
+  z-index:88888;
+  color:#fff;
+  position:absolute;
+  display:flex;
+  bottom:100rpx;
+  width:100vw;
+}
+.lastup{
+  background-color:#ffa433;
+  flex:5;
+  text-align:center;
+  margin:0 30rpx 0 78rpx;
+  padding:20rpx;
+  border-radius:40rpx;
+
+}
+
+.lastgo{
+  background-color:#5b8bff;
+  flex:5;
+  text-align:center;
+  margin:0 78rpx 0 30rpx;
+  padding:20rpx;
+  border-radius:40rpx;
+
+}
+
+.prompt{
+  margin-top:15vh;
+  color:#b7a9f5;
+}
+.prompts{
+  margin-top:10vh;
+  color:#b7a9f5;
+}
+.tt{
+  background-color:#000;
+  height:2vh;
+  width:80vw;
+  opacity:0.2;
+  bottom:10vh;
+  margin-left: 10vw;
+  position:absolute;
+  z-index:5;
+  border-radius:0 0 10rpx 10rpx;
+}

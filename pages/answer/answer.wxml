@@ -1,0 +1,192 @@
+<!-- 头部 -->
+<view  class="user">
+    <view class="head" wx:if="{{kk==1}}">
+      <view class="userhead">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+       <view class="userheadtext" >
+        <image class="madal" src="/images/madal.png"></image>
+        <text style="margin-left:10pt">{{honor}}</text>
+      </view>
+    </view>
+    <view class="mid">
+      <view class="Text">{{user_name}}</view>
+      <view class="Text1">ID: {{day}}</view>
+    </view>
+    <image wx:if="{{musicState==1}}" src="/images/musicopen.png" class="musicopen" bindtap='music'></image>
+    <image wx:if="{{musicState==0}}" src="/images/musicclose.png" class="musicopen" bindtap='music'></image>
+  </view>
+
+<image class="bg" src="../../images/background1.png" mode="aspectFill"  ></image>
+<image src="../../images/background2.png" animation="{{animationMiddle}}" wx:if="{{newscoreopen==1}}" class="background2"></image>
+<image src="../../images/background2.png" wx:if="{{newscoreopen==2}}" class="background2"></image>
+<view wx:if="{{state == 0}}"><!--准备页-->
+  <view class="times" >
+    <image src="../../images/times.png" class="times_img"></image>
+  </view>
+  <!-- <image class="ansBg1" src="{{ansBg1}}" mode="aspectFit" ></image> -->
+  <view class="backgroundpp">
+    <view class="ready" style="opacity:{{opacitynum}}">
+      <text class="readyText" style="font-size:{{size}}pt;">预备</text>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{state == 11}}"><!--准备页-->
+  <view class="times">
+    <image src="../../images/times.png" class="times_img"></image>
+  </view>
+  <!-- <image class="ansBg1" src="{{ansBg1}}" mode="aspectFit" ></image> -->
+  <view class="backgroundpp">
+    <view class="ready" style="opacity:{{opacitynum}}">
+      <text class="readyText" style="font-size:{{size}}pt;">开始</text>
+    </view>
+  </view>
+</view>
+<view class="tt" hidden="{{state ==6 || state == 7}}"></view>
+<view wx:if="{{state == 1}}"><!--第一题-->
+  <view class="times">
+    <view class="pop">
+      <image src="../../images/times.png" class="times_img"></image>
+    </view>
+    <view class="pop2">
+      <text>{{countDownNum}}</text>
+    </view>
+  </view>
+  <!-- <image class="ansBg1" src="{{ansBg1}}" mode="aspectFit"></image> -->
+  <view class="backgroundpp">
+    <view class="title"><!--题号-->
+      <text class="titleText">第一题</text>
+    </view>
+    <view class="centont"><!--题目内容-->
+      <text class="centontText">{{centont[0].question_text}}</text>
+    </view>
+    <view class="option"><!--选项-->
+      <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseA" type="{{coloDtateA}}">A.{{centont[0].A}}</button>
+      <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseB" type="{{coloDtateB}}">B.{{centont[0].B}}</button>
+      <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseC" type="{{coloDtateC}}">C.{{centont[0].C}}</button>
+    </view>
+  </view>
+</view>
+<view wx:if="{{state == 2}}"><!--第二题-->
+  <view class="times">
+    <view class="pop">
+      <image src="../../images/times.png" class="times_img"></image>
+    </view>
+    <view class="pop2">
+      <text>{{countDownNum}}</text>
+    </view>
+  </view>
+  <!-- <image class="ansBg1" src="{{ansBg1}}" mode="aspectFit"></image> -->
+<view class="backgroundpp">
+  <view class="title"><!--题号-->
+    <text class="titleText">第二题</text>
+  </view>
+  <view class="centont"><!--题目内容-->
+    <text class="centontText">{{centont[1].question_text}}</text>
+  </view>
+  <view class="option"><!--选项-->
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseA" type="{{coloDtateA}}">A.{{centont[1].A}}</button>
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseB" type="{{coloDtateB}}">B.{{centont[1].B}}</button>
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseC" type="{{coloDtateC}}">C.{{centont[1].C}}</button>
+  </view>
+  </view>
+</view>
+<view wx:if="{{state == 3}}"><!--第三题-->
+  <view class="times">
+    <view class="pop">
+      <image src="../../images/times.png" class="times_img"></image>
+    </view>
+    <view class="pop2">
+      <text>{{countDownNum}}</text>
+    </view>
+  </view>
+  <!-- <image class="ansBg1" src="{{ansBg1}}" mode="aspectFit"></image> -->
+<view class="backgroundpp">
+  <view class="title"><!--题号-->
+    <text class="titleText">第三题</text>
+  </view>
+  <view class="centont"><!--题目内容-->
+    <text class="centontText">{{centont[2].question_text}}</text>
+  </view>
+  <view class="option"><!--选项-->
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58"  bindtap="chooseA" type="{{coloDtateA}}">A.{{centont[2].A}}</button>
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58"  bindtap="chooseB" type="{{coloDtateB}}">B.{{centont[2].B}}</button>
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseC" type="{{coloDtateC}}">C.{{centont[2].C}}</button>
+  </view>
+</view>  
+</view>
+<view wx:if="{{state == 4}}"><!--第四题-->
+  <view class="times">
+    <view class="pop">
+      <image src="../../images/times.png" class="times_img"></image>
+    </view>
+    <view class="pop2">
+      <text>{{countDownNum}}</text>
+    </view>
+  </view>
+  <!-- <image class="ansBg1" src="{{ansBg1}}" mode="aspectFit"></image> -->
+<view class="backgroundpp">
+  <view class="title"><!--题号-->
+    <text class="titleText">第四题</text>
+  </view>
+  <view class="centont"><!--题目内容-->
+    <text class="centontText">{{centont[3].question_text}}</text>
+  </view>
+  <view class="option"><!--选项-->
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseA" type="{{coloDtateA}}">A.{{centont[3].A}}</button>
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseB" type="{{coloDtateB}}">B.{{centont[3].B}}</button>
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseC" type="{{coloDtateC}}">C.{{centont[3].C}}</button>
+  </view>
+</view>
+</view>
+<view wx:if="{{state == 5}}"><!--第五题-->
+  <view class="times">
+    <view class="pop">
+      <image src="../../images/times.png" class="times_img"></image>
+    </view>
+    <view class="pop2">
+      <text>{{countDownNum}}</text>
+    </view>
+  </view>
+  <!-- <image class="ansBg1" src="{{ansBg1}}" mode="aspectFit"></image> -->
+<view class="backgroundpp">
+  <view class="title"><!--题号-->
+    <text class="titleText">第五题</text>
+  </view>
+  <view class="centont"><!--题目内容-->
+    <text class="centontText">{{centont[4].question_text}}</text>
+  </view>
+  <view class="option" ><!--选项-->
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseA" type="{{coloDtateA}}">A.{{centont[4].A}}</button>
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseB" type="{{coloDtateB}}">B.{{centont[4].B}}</button>
+    <button class="optionBnt" style="line-height:1.355;color:#4d3e58" bindtap="chooseC" type="{{coloDtateC}}">C.{{centont[4].C}}</button>
+  </view>
+  </view>
+</view>
+<!-- 得分 -->
+<view class="mongolia" wx:if="{{newscoreopen == 1}}"></view>
+<view class="score" animation="{{animationMiddleHeaderItem}}" wx:if="{{newscoreopen == 1}}">
+  <image src="../../images/score.png" mode="aspectFill" class="score_star"></image>
+  <text>+{{scores}}</text>
+  <image src="../../images/scorebj.png" mode="aspectFill" class="score_bj"></image>
+</view>
+<view wx:if="{{state == 6}}"><!--胜利-->
+  <image class="ansBg2" src="{{ansBg2}}" mode="aspectFill" ></image>
+  <view class="scoreCss">
+    <text class="scoreText">{{winscore}}</text>
+    <text class="prompts">{{prompts}}</text>
+  </view>
+</view>
+<view wx:if="{{state == 7}}"><!--失败-->
+  <image class="ansBg2" src="{{ansBg3}}" mode="aspectFill" ></image>
+  <view class="scoreCss">
+    <text class="scoreText">{{winscore}}</text>
+    <text class="prompt">{{prompts}}</text>
+  </view>
+</view>
+<view class="last" wx:if="{{state == 6 || state == 7}}">
+  <view class="lastup" bindtap='lastup'>返回</view>
+  <view class="lastgo" bindtap='lastgo' wx:if="{{times > 1 && pdp >0}}">继续挑战</view>
+  <view class="lastgo" bindtap='lastup' wx:if="{{times <= 1 || pdp <= 0}}">明天再来</view>
+</view>

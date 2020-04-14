@@ -1,0 +1,51 @@
+<!--pages/me/me.wxml-->
+<import src="mes/mes.wxml" />
+<view class="overall">
+  <!--全局-->
+  <image class="backCss" src="{{backBnt}}" mode="aspectFit" bindtap='openFirst'></image>
+  <view class="userinfoImg"  mode="cover"><open-data type="userAvatarUrl"></open-data></view>
+  
+  <view class="userinfoCss">
+    <view>{{data.user_project}}</view>
+    <view>{{data.name}}</view>
+    <view style="margin:10rpx;font-size:24rpx;"><text>等级：{{honer_name}}</text></view>
+  </view>
+
+  <view>
+    <view class="medalbackground" wx:if="{{popup==0}}">
+  <view class="medal">
+    <image class="medal1" src="../../images/rank.png"></image>
+    <text style="color:#FFF;margin: 0% 5% 4% 0%;">最高排名</text>
+    <text style="color:#FF9600">{{data.user_ranktop}}</text>
+  </view>
+  <view class="medal">
+    <image class="medal2" src="../../images/scene.png"></image>
+    <text style="color:#FFF;margin: 0% 5% 4% 0%;">总场次</text>
+    <text style="color:#FF9600; margin: 0% 2% 2% 0%;" >{{data.user_answernum}}</text>
+  <view style="display:flex;">
+    <text style="width:10vw;">胜率</text>
+    <text style="color:#FF9600;margin: 0% 0% 4% 2%;">{{data.user_question}}%</text>
+  </view>
+</view>
+  <view class="medalend" bindtap='openPopup'>
+    <image class="medal1" src="../../images/problem.png"></image>
+    <text style="color:#FFF">问题反馈>></text>
+  </view>
+</view>
+    <image class="popup" src="{{popupSrc}}" mode="aspectFill" wx:if="{{popup == 1}}" bindtap='closePopup'> </image>
+  </view>
+
+  <view wx:if="{{popup == 1}}" background-image="{{popupSrc}}" class="pop">
+    <text class="textCss">{{maxle}}</text>
+    <template is="name" />
+    <text class="textCss">{{allgame}}</text>
+    <template is="phone" />
+    <text class="textCss">{{vgame}}</text>
+    <template is="text" />
+    <view class="but">
+      <text bindtap='but'>确认提交></text>
+    </view>
+  </view>
+</view>
+
+

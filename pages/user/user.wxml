@@ -1,0 +1,47 @@
+
+  <image src="../../images/background.jpg" class="img"></image>
+    <image class="popup"  mode="aspectFit"></image>
+    <form class="logForm" bindsubmit="openFirst1">
+    <view class="log">登录</view>
+      <view class="top"> 
+        <label class="title">城市</label> 
+        <view class="tui-picker-content input_base">
+          <picker bindchange="changeCountry"  value="{{countryIndex}}" range="{{countryList}}">
+            <view class="tui-picker-detail">{{countryList[countryIndex]}}</view>
+          </picker>
+        </view>
+      </view> 
+      <view class="top"> 
+        <label class="title">项目名</label> 
+        <view class="tui-picker-content input_base">
+          <picker bindchange="change"  value="{{changeIndex}}" range="{{add}}">
+            <view class="tui-picker-detail">{{add[changeIndex]}}</view>
+          </picker>
+        </view>
+      </view> 
+      <view class="top"> 
+        <label class="title">姓名</label> 
+        <input class="input_base" name="rname"></input> 
+      </view> 
+      <view class="top"> 
+        <label class="title">电话</label> 
+        <input class="input_base" name="phone" maxlength="11"></input> 
+      </view>
+      <view class="logBnt">
+      <button class="logBntCss" formType="submit" style="width:30vw; border-radius:30rpx;color:#fff;background-image:linear-gradient(#fea04b, #fea04b);border:5rpx solid #fed58e " open-type="getUserInfo" lang="zh_CN" bindtap="onGotUserInfo"><text class="res">确认注册>></text>
+      </button>
+        <button class="logBntCss" bindtap="openPopup2"style="width:40vw; border-radius:30rpx;color:#fff;background-image:linear-gradient(#606162, #606162);border:5rpx solid #919293 ">以游客身份登录>></button>
+      </view>
+      <view class="annotation">
+<text style="color:red;">*</text>
+<text style="color:#ffffff">注册信息不可修改</text>
+</view>
+    </form>
+  <view wx:if="{{popupState == 2}}" style="z-index:3">
+    <image class="popup" src="{{popupBg2}}" mode="aspectFit" style="z-index:3"></image>
+    <view class="popBntCss">
+      <view class="yes" bindtap="openFirst2">YES</view>
+      <view style="flex:1"></view>
+      <view class="no" bindtap="openPopup1">NO</view>
+    </view>
+  </view>

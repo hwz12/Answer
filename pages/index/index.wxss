@@ -1,0 +1,68 @@
+
+/**视频**/
+
+.skipCss {
+  position: absolute;
+  z-index: 1;
+  width: 25vw;
+  height: 25vw;
+  bottom: 0;
+  right: 0;
+}
+
+.video {
+  height: 100vh;
+  width: 100vw;
+  top: 0px ; 
+  left:   0px ; 
+  overflow:hidden ; 
+  position:fixed ; 
+  z-index:   0 ; 
+  overflow-y: hidden;
+}
+
+.logon {
+  background: #ff9600;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  border: 5rpx solid rgba(255, 213, 149);
+  color: #ffff;
+  padding: 10rpx;
+  font-size: 17rpx;
+  margin: 60rpx 230rpx 10rpx;
+}
+
+.tourist {
+  background: #000;
+  border: 5rpx solid rgb(151, 144, 144);
+  border-radius: 50rpx;
+  margin: 20rpx 200rpx;
+  color: #ffff;
+  padding: 10rpx;
+  font-size: 17rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.right-arrow {
+  display: inline-block;
+  position: relative;
+  width: 36rpx;
+  margin: 9rpx -20rpx 0rpx -15rpx;
+}
+
+.right-arrow::after {
+  display: inline-block;
+  content: " ";
+  height: 10rpx;
+  width: 10rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #fff;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  right: 6rpx;
+  margin-top: -9rpx;
+}

@@ -1,0 +1,120 @@
+
+
+/**登录弹窗**/
+.img{
+  position: absolute;
+  width:100vw;
+  height:100vh;
+}
+.popup {
+ background: linear-gradient(#72c8bd, #54c4ca);
+width: 76%;
+height: 59%;
+margin: 45% 10% 10% 12vw;
+position: absolute;
+z-index: 2;
+opacity: 0.9;
+border-radius: 20rpx;
+}
+.popup1 {
+
+width: 71%;
+height: 59%;
+margin: 45% 10% 10% 15vw;
+position: absolute;
+z-index: 2;
+opacity: 0.9;
+border-radius: 20rpx;
+}
+
+.logForm {
+  width: 80vw;
+  margin-left: 12vw;
+  margin-top: 29vh;
+  position: absolute;
+  z-index: 3;
+}
+
+.log{
+  text-align:center;
+  color:#fff;
+  font-size:13pt;
+  margin-bottom:1vh;
+}
+
+.top {
+  padding-top: 15px;
+  display: -webkit-box;
+  display: box;
+  color: #f3974b;
+}
+
+.title {
+  height: 30px;
+  line-height: 30px;
+  width: 160rpx;
+  text-align: center;
+  display: inline-block;
+  font: 300 28rpx/30px "microsoft yahei";
+  -webkit-box-flex: 0;
+  box-flex: 0;
+  color: #fff;
+}
+
+.input_base {
+  background: #fff;
+  border: 2rpx solid #ccc;
+  padding-left: 5rpx;
+  margin-right: 125rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.logBnt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logBntCss {
+  margin-top: 2vh;
+  font-size: 8pt;
+}
+.annotation{
+  text-align:center;
+  margin-top:3vh;
+}
+
+.seat{
+  flex:2
+}
+.popBntCss {
+  width: 60vw;
+  position: absolute;
+  z-index: 5;
+  margin-top: 60vh;
+  margin-left:20vw;
+  text-align: center;
+  display:flex;
+}
+
+.yes{
+  flex:2;
+  border-radius:30rpx;
+  background-color:#fff;
+  padding:3rpx;
+}
+
+.no{
+  flex:2;
+  border-radius:30rpx;
+  background-color:#fff;
+  padding:3rpx;
+}
+.res{
+  margin-top: 20vw;
+}

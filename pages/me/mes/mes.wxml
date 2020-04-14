@@ -1,0 +1,9 @@
+<template name="name">
+    <input bindinput='name' style="background-color:#fff;border-radius:10rpx;color:#000;padding:0 8rpx;"></input>
+</template>
+<template name="phone">
+   <input bindinput='phone' style="background-color:#fff;border-radius:10rpx;color:#000;padding:0 8rpx;"></input>
+</template>
+<template name="text">
+    <textarea bindinput='text' style="background-color:#fff;border-radius:10rpx;color:#000;padding:0 8rpx;height:160rpx;width:auto;"/>
+</template>

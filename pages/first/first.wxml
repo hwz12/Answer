@@ -1,0 +1,109 @@
+<!--pages/first/first.wxml-->
+<!--首页-->
+<view class="Overall"><!--全局-->
+<view class='notice-wrap' hidden='{{hideNotice}}'>
+  <view class='notice ovh font28 relative'>
+    <view class="marquee_text" style="left:{{marqueeDistance}}px;">
+      {{notice}}
+    </view>
+  </view>
+</view>
+  <!--用户信息&签到-->
+  <view  class="user">
+    <view class="head" wx:if="{{kk == 1}}">
+      <view class="userhead">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+       <view class="userheadtext">
+        <image class="madal" src="/images/madal.png"></image>
+        <text style="margin-left:10pt">{{honor}}</text>
+      </view>
+    </view>
+
+    <view class="mid">
+      <!-- <view style="height:48rpx;"></view> -->
+      <view class="userinfoText">{{identity}}</view>
+      <view class="Text" wx:if="{{identity == '游客'}}">签到</view>
+      <view class="Text" wx:if="{{signState == 0 && identity != '游客'}}" bindtap="openSign">签到</view>
+      <view class="Text1" wx:if="{{signState == 1}}">已签到{{day}}天</view>
+    </view>
+  </view>
+
+  
+  
+
+  <!--按钮-->
+  <view class="Bnt">
+    <view class="bntstate"><!--说明-->
+      <image class="bntImg" src="{{explan}}" mode="aspectFit" bindtap='openExplan'></image>
+    </view>
+    <view class="bntstate"><!--排行-->
+      <image class="bntImg" src="{{ranking}}" mode="aspectFit" bindtap='openRanking'></image>
+    </view>
+    <view class="bntstate"><!--我的-->
+      <image class="bntImg" src="{{me}}" mode="aspectFit" bindtap='openMe'></image>
+    </view>
+    <view class="bntstate" bindtap='mucControl'><!--音乐开关-->
+      <image wx:if="{{musicState==1}}" class="bntImg" src="{{music}}" mode="aspectFit"></image>
+      <image wx:if="{{musicState==0}}" class="bntImg" src="/images/first5close.png" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <!--星球-->
+  <image class="ertImg" src="{{earth}}" mode="aspectFill"></image>
+  <image class="ertBnt" src="{{earthBnt}}" mode="aspectFit" bindtap="openAnswer" animation="{{animation}}"></image> 
+
+  <!--弹框-->
+  <view class="popup" wx:if="{{popup == 1}}" bindtap='closePopup'><!--说明框-->
+    <image class="popupway" src="{{popup01}}" mode="aspectFill"></image>
+  </view>
+  <view class="background" wx:if="{{popup == 2}}"></view>
+  <!-- <view class="popup" wx:if="{{popup == 2}}" bindtap='closePopup'  > -->
+  <!--签到成功框-->
+    <!-- <image src="../../images/score.png" class="score" animation="{{animationMiddleHeaderItem}}" ></image>
+    
+    <image class="popupImg" src="{{popup03}}" mode="aspectFill" ></image>
+    <image class="popupImg" src="../../images/popup10.png" mode="aspectFill" wx:if="{{ten == 10}}"></image> -->
+    
+  <!-- </view> -->
+  <view class="signin" wx:if="{{popup == 2}}" bindtap='closePopup'>
+    <view class="signinmid">
+        <image src="../../images/score.png" class="score" animation="{{animationMiddleHeaderItem}}" ></image>
+        <view style="margin-right:12vw;padding:7vw 0 0" wx:if="{{ten != 10}}">签到成功{{day}}天，积分+1</view>
+        <view style="margin-right:10vw;padding:7vw 0 0" wx:if="{{ten == 10}}">签到成功{{day}}天，积分+10</view>
+        <view>【连续签到7天，积分+10】</view>
+    </view>
+    <view class="closePopup">X</view>
+  </view>
+  <view class="popup" wx:if="{{popup == 3}}" bindtap='closePopup'><!--机会已完框-->
+    <image class="popupImg" src="{{popup02}}" mode="aspectFill"></image>
+  </view>
+
+  <!--问题-->
+  <view class="Question" >
+    <view class="page-section page-section-spacing swiper">
+      <swiper class="test" indicator-dots="{{indicatorDots}}"> 
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item mode="aspectFill">
+          <image src="{{item}}" class="aspimg" mode="aspectFit"></image>
+            <view class="lastbut" >
+              <view style="width:95vw;height:13vh;" bindtap="openAnswe{{index == 0 ? 'r':''}}"></view>
+              <view style="width:47.5vw;height:13vh;float:left;bottom:0;position:absolute"></view>
+              <view bindtap="openrankin{{index == 0?'g':''}}" style="width:47.5vw;height:13vh;margin-left:47.5vw;bottom:0;position:absolute"></view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view>
+
+<!-- 段位升级 -->
+<view wx:if="{{upgrade == 1}}" class="ppimg"></view>
+<view wx:if="{{upgrade == 1}}" animation="{{animationData}}" class="pp" bindtap='upgrade'>
+  <image src="/images/upgrade.png" class="upgrade" bindtap='upgrade'></image>
+  <view class="upgrade_view">
+    <view>恭喜升级！段位提升至</view>
+    <view style="font-size:40rpx;margin-top:1vh;">{{upgradetext}}</view>
+  </view>
+</view>

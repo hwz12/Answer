@@ -1,0 +1,28 @@
+
+/**微信授权**/
+
+.textcss1 {
+  font-weight: bold;
+  font-size: 40rpx;
+  margin-top: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textcss2 {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bnt {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 30vw;
+  height:4vh;
+  margin-top:15rpx;
+  background-color:#fff;
+}

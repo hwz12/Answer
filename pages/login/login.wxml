@@ -1,0 +1,3 @@
+  <text class="textcss1" >微信授权登录</text>
+  <text class="textcss2">使用当前微信账号登录</text>
+  <button wx:if="{{canIUse}}" mode="aspectFit" class="bnt" open-type="getUserInfo" lang="zh_CN" bindtap="onGotUserInfo"> 确认登录 </button>

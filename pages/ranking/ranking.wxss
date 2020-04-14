@@ -1,0 +1,161 @@
+/* pages/ranking/ranking.wxss */
+
+.overall{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: 100% 100%;
+  background-image:url('https://rui.20181206.top/weixin/image/first/first1.jpg');
+}
+.backCss{
+  margin-top:10.5vh;
+  right:0;
+  position:absolute;
+  z-index:4;
+  height:6vh;
+  width:6vh;
+  margin-right:5vw;
+}
+.myhead{
+  position:absolute;
+  margin-left:11vw;
+  height:8vh;
+  margin-top:12vh;
+  margin-right:11vw;
+  width:79vw;
+}
+.mylast{
+  position:absolute;
+  margin-left:11vw;
+  height:8vh;
+  margin-top:75vh;
+  margin-right:11vw;
+  width:79vw;
+}
+.ppbj{
+  height:100vh;
+  width:100vw;
+  background-color:#000;
+  opacity:0.7;
+  position:absolute;
+  z-index: 30
+}
+.pp{
+  position:absolute;
+  z-index:50;
+  height:65vh;
+  width:90vw;
+  margin-top:15vh;
+  margin-left:5vw;
+  text-align: center;
+  line-height:40;
+}
+.ppimg{
+  height:900rpx;
+  width:600rpx;
+}
+.rakingBg{
+  width: 80vw;
+  height: 136vw;
+  position: absolute;
+  z-index: 1;
+  margin-left: 10vw;
+  margin-top: 20vw;
+}
+.rakingWenHua{
+  background-color: black;
+  width: 74vw;
+  height: 10vw;
+  position: absolute;
+  z-index: 2;
+  margin-left: 13vw;
+  margin-top: 143vw;
+  opacity: 0.1;
+}
+.wenhuaCss{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 6;
+}
+
+
+.b1{
+  margin-top: 20vh;
+  height:55vh;
+  overflow-y:auto; 
+  overflow:hidden;
+}
+
+
+.a1{
+  width: 79vw;
+  height: 7.7vh;
+  margin-left: 11vw;
+  background-image: linear-gradient(#412cb5, #4b34c2);
+}
+.a11{
+  width: 79vw;
+  height: 7.7vh;
+  margin-left: 11vw;
+  background-color:#372490;
+}
+.crown{
+  height:8vw;
+  width:8vw;
+  position:absolute;
+  margin-top:1vh;
+}
+.s0{
+  width:8vw;
+  position: absolute;
+  margin-left: 0vw;
+  z-index: 3;
+  color: white;
+  font-size: 8pt;
+  text-align: center;
+  line-height: 7.7vh
+}
+
+.s1{
+  width:10vw;
+  position:absolute;
+  margin-left:9vw;
+  z-index:3;
+  color:white;
+  font-size:8pt;
+  height:10vw;
+  border-radius:50%;
+  border:4rpx solid #fff;
+  line-height: 7.7vh;
+  margin-top:1vh;
+}
+.s2{
+  width: 30vw;
+  position: absolute;
+  margin-left: 22vw;
+  z-index: 3;
+  color: white;
+  font-size: 8pt;
+}
+.s3{
+  width: 12vw;
+  position: absolute;
+  margin-left: 54vw;
+  z-index: 3;
+  color: white;
+  font-size: 8pt;
+}
+.s4{
+  width: 12vw;
+  position: absolute;
+  margin-left: 66vw;
+  z-index: 3;
+  color: white;
+  font-size: 8pt;
+  text-align:center;
+}
+.love{
+  height:20rpx;
+  width:20rpx;
+}

@@ -1,0 +1,48 @@
+<!--pages/ranking/ranking.wxml-->
+<view class="overall" ><!--全局-->
+  <view wx:if="{{rakingBgSt == 0}}"><!--背景1-->
+    <image class="rakingBg" src="{{rakingBgSrc1}}" mode="aspectFit"></image>
+  </view>
+  <view wx:if="{{rakingBgSt == 1}}"><!--背景2-->
+    <image class="backCss" src="../../images/close.png"  bindtap='openFirst'></image>
+    <!-- <image class="rakingBg" src="../../images/background1.png" mode="aspectFit"></image> -->
+  </view>
+  <image src="../../images/myhead.png" class="myhead"></image>
+  <image src="../../images/kk.png" class="mylast" wx:if="{{data.stat_state == 1}}"></image>
+  <image src="../../images/mylast.png" class="mylast" bindtap='putinfo' wx:if="{{data.stat_state == 0}}"></image>
+  <view wx:if="{{pp==1}}" class="ppbj"> </view>
+  <view class="pp" wx:if="{{pp==1}}">
+    <image src="{{data.image_url}}" class="ppimg"  bindtap='pp'></image>
+  </view>
+  <view><!--表格-->
+    <scroll-view class="b1" scroll-y="true" bindscrolltolower='scrollToLower'><!--排行表-->
+      <view  wx:for="{{content}}" data-tiem="item" wx:key="item" >
+        <view class="a1{{index == 0?'1':''}}" data-index="{{index}}">
+          <image src="/images/crown.png" class="crown" wx:if="{{index == 1}}"></image>
+          <text class="s0" wx:if="{{index == 0}}">我的</text>
+          <text class="s0" wx:if="{{index != 0}}">{{index}}</text>
+          <image class="s1" src="{{item.user_image}}"></image>
+          <view class="s2">
+            <view style="margin-top:2vh">{{item.user_project}}</view>
+            <view style="width:20vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{item.user_name}}</view>
+          </view>
+          <view class="s3"><view style="margin-top:2vh">{{item.user_upperscore}}</view><view>{{item.honor_name}}</view></view>
+          <view class="s4" wx:if="{{index == 0}}" data-usr_id="{{item.user_id}}" data-id="{{data.id}}" data-user_name="{{item.user_name}}">
+            <view style="margin-top:2vh;">
+              <text>{{item.user_spotlove}}</text>
+              <text style="margin-top:-1vh;position:absolute;">+</text>
+            </view>
+            <image src="../../images/love.png" class="love"></image>
+          </view>
+          <view class="s4" wx:if="{{index != 0}}" bindtap='love' data-usr_id="{{item.user_id}}" data-id="{{data.id}}" data-user_name="{{item.user_name}}">
+            <view style="margin-top:2vh;">
+              <text>{{item.user_spotlove}}</text>
+              <text style="margin-top:-1vh;position:absolute;">+</text>
+            </view>
+            <image src="../../images/love.png" class="love"></image>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

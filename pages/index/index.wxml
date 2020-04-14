@@ -1,0 +1,15 @@
+
+  
+ <!--视频区-->
+  <image bindtap="openPopup1" class="skipCss" src="{{skip}}" mode="aspectFit" animation="{{animation}}" wx:if="{{loginState == 0}}"></image>
+  <video 
+    class="video" 
+    src="http://rui.20181206.top/weixin/media/video01.mp4"
+    controls="{{fal}}"
+    enable-progress-gesture="{{fal}}"
+    autoplay="true"
+    objectFit="cover"
+    bindended="openPopup1"
+    data-statu="open"
+    bindtap="openFirst2"
+  ></video>
